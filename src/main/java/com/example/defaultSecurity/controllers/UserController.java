@@ -12,6 +12,12 @@ public class UserController
     @RequestMapping(value = {"/api/user"}, method = RequestMethod.GET)
     public ResponseEntity<?> testUser()
     {
-        return ResponseEntity.ok("Hello Spring Demo!");
+        return ResponseEntity.ok("Hello Private User!");
+    }
+
+    @RequestMapping(value = {"/public"}, method = RequestMethod.GET)
+    public ResponseEntity<?> publicUser()
+    {
+        return ResponseEntity.ok("Hello Public User!");
     }
 }
